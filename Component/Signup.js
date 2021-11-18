@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Button, Text, View, TextInput, StyleSheet, Alert, Image, TouchableOpacity } from 'react-native';
 import { auth } from '../firebase';
 
-const Login = ({ navigation }) => {
+const Signup = ({ navigation }) => {
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
 
@@ -60,7 +60,7 @@ const Login = ({ navigation }) => {
         <View style={styles.container}>
             <Text style={styles.title}>Estiam Market</Text>
             <Text></Text>
-            <Text style={styles.subtitle}>Se connecter</Text>
+            <Text style={styles.subtitle}>Inscription</Text>
             <TextInput
                 style={styles.input}
                 placeholder={"Utilisateur"}
@@ -76,13 +76,8 @@ const Login = ({ navigation }) => {
             />
 
             <Text></Text>
-            <Button title="Connexion" onPress={handleSignIn} color='#00b1cc'/>
-            <Text></Text>
-            <TouchableOpacity
-            onPress={ () => navigation.navigate("Inscription")}
-            >
-            <Text style={styles.link}>Créer un compte</Text>
-            </TouchableOpacity>
+            <Button title="S'inscrire" onPress={handleSignUp} color='#00b1cc'/>
+
         </View>
     );
 }
@@ -119,4 +114,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Login;
+export default Signup;

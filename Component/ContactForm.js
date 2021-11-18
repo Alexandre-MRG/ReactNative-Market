@@ -49,8 +49,8 @@ const ContactForm = () => {
     }
 
     return (
-        <View>
-            <Text style={[styles.title]}>Contact</Text>
+        <View style={styles.container}>
+            <Text style={[styles.title]}>Formulaire de contact</Text>
             <TextInput
                 style={styles.input}
                 placeholder={"Prénom"}
@@ -76,6 +76,12 @@ const ContactForm = () => {
 };
 
 const styles = StyleSheet.create({
+    container:{
+        margin:'5%'
+    },
+    title:{
+        fontWeight:'bold'
+    },
     input: {
         height: 40,
         margin: 12,
