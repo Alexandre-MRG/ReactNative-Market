@@ -27,7 +27,7 @@ const HomeScreen = ({ navigation }) => {
   useEffect(() => {
     // A chaque mise à jour du contexte
     setItemCount(context.length);
- }, [isFocused])
+  }, [isFocused])
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -108,6 +108,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     marginRight: '5%',
-    marginBottom:'5%'
+    marginBottom: '5%'
   }
 });

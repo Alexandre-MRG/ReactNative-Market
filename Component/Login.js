@@ -26,16 +26,6 @@ const Login = ({ navigation }) => {
         );
     }
 
-    const handleSignUp = () => {
-        auth.createUserWithEmailAndPassword(user, pass)
-            .then((user) => {
-                console.log("signup success");
-                showAlert("Inscription réussie", "Vous êtes inscrit !");
-                console.log(user);
-            })
-            .catch(e => showAlert("Inscription échouée", e.toString()));
-    }
-
     const handleSignIn = () => {
         // TEST
         navigation.replace("HomeScreen");
@@ -47,13 +37,6 @@ const Login = ({ navigation }) => {
                 navigation.replace("HomeScreen");
             })
             .catch(e => showAlert("Connexion échouée", e.toString()));
-    }
-
-    const logout = () => {
-        auth.signOut()
-            .then(() => {
-                console.log("signOut success");
-            })
     }
 
     return (

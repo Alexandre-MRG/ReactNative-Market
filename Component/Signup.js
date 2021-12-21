@@ -36,26 +36,6 @@ const Signup = ({ navigation }) => {
             .catch(e => showAlert("Inscription échouée", e.toString()));
     }
 
-    const handleSignIn = () => {
-        // TEST
-        navigation.replace("HomeScreen");
-        auth.signInWithEmailAndPassword(user, pass)
-            .then((user) => {
-                console.log("signIn success");
-                console.log(user);
-                showAlert("Connexion réussie", "Vous êtes connecté !");
-                navigation.replace("HomeScreen");
-            })
-            .catch(e => showAlert("Connexion échouée", e.toString()));
-    }
-
-    const logout = () => {
-        auth.signOut()
-            .then(() => {
-                console.log("signOut success");
-            })
-    }
-
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Estiam Market</Text>
