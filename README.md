@@ -1,4 +1,4 @@
-# CV ReactNative
+# ReactNative Market
 
 ---
 ## Description du projet
@@ -6,9 +6,10 @@
 Ce projet est développé en ReactNative. Il consiste en une application mobile avec :
 
 - Une **page de connexion** liée à un module d'authentification par mail et mot de passe Fireauth
-- Une **page de présentation** sous la forme d'un CV
-- Un **formulaire de contact** lié à un module de base de données cloud Firestore
-- Une **page de profil** affichant les informations utilisateurs ainsi que la météo pourvue d'un bouton de déconnexion
+- Une **boutique** avec une liste d'article
+- Un **panier** récapitulatif des articles avec possibilité de passer commande
+- Un **historique de commande** lié à un module de base de données cloud Firestore
+- Une **page de profil** affichant les informations utilisateurs ainsi que la météo pourvue d'un bouton de déconnexion (lié à un cloud Firestore)
 
 ---
 ## Installation
@@ -25,3 +26,8 @@ npm install -g expo-cli
 npm install
 expo start
 ```
+
+---
+## Démonstration
+
+![Démonstration](EstiamMarket.gif)
